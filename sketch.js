@@ -121,7 +121,7 @@ function setup() {
 function draw() {
   background(102, 53, 50)
   Engine.update(engine);  
-  
+  text("SCORE: "+score,730,10)
 
   box1.display();
   box2.display();
