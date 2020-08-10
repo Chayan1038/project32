@@ -16,9 +16,5 @@ class Box{
         rect(pos.x,pos.y,this.width,this.height);
         fill("white");
     }
-    score(){
-        if(this.visibility<0 && this.visibility >=105 ){
-            score++;
-        }
-    }
+    
 }

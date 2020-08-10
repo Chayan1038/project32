@@ -4,12 +4,12 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
 var engine,world;
-
+var bg;
 function setup() {
   createCanvas(800,400);
   engine = Engine.create();
   world = engine.world;
-
+score = 0;
   box1 = new BlueBox(500,360,20,30);
   box2 = new BlueBox(520,360,20,30);
   box3 = new RedBox(540,360,20,30);
@@ -119,9 +119,8 @@ function setup() {
 }
 
 function draw() {
-  background(102, 53, 50)
   Engine.update(engine);  
-  text("SCORE: "+score,730,10)
+  text("SCORE: "+score,700,40);
 
   box1.display();
   box2.display();
@@ -192,3 +191,13 @@ function keyPressed(){
   }
 
 }
+/*async function getTime(){
+  var time = await fetch("http://worldtimeapi.org/api/timezone/asia/kolkata");
+  var timeJSON = await time.json();
+  var date = timeJSON.datetime;
+  var hour = date.slice(11,13);
+  if(hour>=06 && hour<=18){
+
+  }
+}
+*/

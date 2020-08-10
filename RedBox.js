@@ -17,4 +17,9 @@ class RedBox extends Box{
         pop();
       }
     }
+    score(){
+      if(this.Visibility<0 && this.Visiblity>=-1630){
+        score++;
+      }
+    }
 }
