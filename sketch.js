@@ -119,7 +119,8 @@ score = 0;
 }
 
 function draw() {
-  Engine.update(engine);  
+  Engine.update(engine); 
+  background("red") 
   text("SCORE: "+score,700,40);
 
   box1.display();
